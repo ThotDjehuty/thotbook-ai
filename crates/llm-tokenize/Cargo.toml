@@ -1,0 +1,24 @@
+[package]
+name = "llm-tokenize"
+version.workspace = true
+edition.workspace = true
+license.workspace = true
+description = "thotbook-ai M2 — tokenize the lakehouse corpus into sharded training-ready datasets (Qwen3 tokenizer)"
+
+[dependencies]
+deltalake.workspace = true
+tokio.workspace = true
+clap.workspace = true
+thiserror.workspace = true
+serde.workspace = true
+serde_json.workspace = true
+tracing.workspace = true
+tracing-subscriber.workspace = true
+tokenizers = "0.21"
+arrow = "57"
+rayon = "1"
+reqwest.workspace = true
+url = "2"
+
+[dev-dependencies]
+ahash = "0.8"

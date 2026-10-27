@@ -1,0 +1,22 @@
+[package]
+name = "llm-auto"
+version.workspace = true
+edition.workspace = true
+license.workspace = true
+description = "Autonomous orchestration: task decomposition, sub-agent spawning, self-training"
+
+[dependencies]
+tokio = { workspace = true, features = ["full"] }
+serde = { workspace = true }
+serde_json = { workspace = true }
+tracing = { workspace = true }
+thiserror = { workspace = true }
+reqwest = { version = "0.12", default-features = false, features = ["json", "rustls-tls"] }
+uuid = { version = "1", features = ["v4"] }
+chrono = "0.4"
+regex = "1"
+
+# Internal crates (optional, for direct integration)
+# llm-train = { path = "../llm-train" }
+# llm-corpus = { path = "../llm-corpus" }
+# llm-rag = { path = "../llm-rag" }

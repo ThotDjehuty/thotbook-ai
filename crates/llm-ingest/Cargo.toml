@@ -1,0 +1,20 @@
+[package]
+name = "llm-ingest"
+version.workspace = true
+edition.workspace = true
+license.workspace = true
+description = "Universal document ingestion: PDF, Markdown, agent files"
+
+[dependencies]
+tokio = { workspace = true }
+serde = { workspace = true }
+serde_json = { workspace = true }
+rayon = { workspace = true }
+tracing = { workspace = true }
+walkdir = { workspace = true }
+thiserror = { workspace = true }
+fancy-regex = { workspace = true }
+pdf-extract = "0.7"
+pulldown-cmark = "0.12"
+memmap2 = "0.9"
+uuid = { version = "1", features = ["v4"] }

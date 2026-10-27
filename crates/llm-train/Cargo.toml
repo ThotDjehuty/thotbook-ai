@@ -1,0 +1,22 @@
+[package]
+name = "llm-train"
+version.workspace = true
+edition.workspace = true
+license.workspace = true
+description = "LoRA/QLoRA fine-tuning + full training for Qwen3 models"
+
+[dependencies]
+tokio = { workspace = true }
+serde = { workspace = true }
+serde_json = { workspace = true }
+rayon = { workspace = true }
+tracing = { workspace = true }
+thiserror = { workspace = true }
+candle-core = { workspace = true }
+optimizr = { workspace = true }
+candle-nn = { workspace = true }
+candle-transformers = { workspace = true }
+tokenizers = { workspace = true }
+arrow = { version = "54", default-features = false, features = ["ipc"] }
+parking_lot = "0.12"
+memmap2 = "0.9"

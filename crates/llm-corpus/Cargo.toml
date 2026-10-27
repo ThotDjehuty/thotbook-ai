@@ -1,0 +1,23 @@
+[package]
+name = "llm-corpus"
+version.workspace = true
+edition.workspace = true
+license.workspace = true
+description = "thotbook-ai M1 — ingest historia.db + thotbook.db into Polarway Delta datasets (sessions/corpus/equations/citations) with secret redaction"
+
+[dependencies]
+polarway-lakehouse.workspace = true
+deltalake.workspace = true
+tokio.workspace = true
+rusqlite.workspace = true
+fancy-regex.workspace = true
+clap.workspace = true
+thiserror.workspace = true
+serde.workspace = true
+serde_json.workspace = true
+tracing.workspace = true
+tracing-subscriber.workspace = true
+reqwest.workspace = true
+quick-xml.workspace = true
+scraper.workspace = true
+walkdir.workspace = true

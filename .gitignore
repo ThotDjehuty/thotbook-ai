@@ -1,0 +1,47 @@
+# --- Rust ---
+/target/
+**/*.rs.bk
+
+# --- Derived data (re-created by the pipeline; never committed) ---
+/data/
+
+# --- Python ---
+__pycache__/
+*.py[cod]
+*.egg-info/
+.pytest_cache/
+.venv/
+build/
+dist/
+
+# --- Tooling / OS ---
+.idea/
+.vscode/
+.DS_Store
+*.swp
+docs/_build/
+
+# --- Never publish agent/workspace-management files to this public repo ---
+/sAlvIers/
+*.agent.md
+
+# Extracted research-corpus text and derived artifacts.
+# These contain verbatim text from private/proprietary and third-party
+# copyrighted PDFs and must never reach a public remote. Regenerate locally
+# with: python3 notebooks/extract_corpus.py && python3 notebooks/prepare_mia_splits.py
+notebooks/data/
+/tmp/fed_survey.txt
+
+# LaTeX build artifacts
+papers/*.aux
+papers/*.log
+papers/*.out
+papers/*.toc
+
+# Training run outputs
+checkpoints/
+training_metrics.jsonl
+
+# Third-party reference papers kept locally, never published
+papers/Ver_Ano_Sim_using_MP.pdf
+papers/*.bak-*
